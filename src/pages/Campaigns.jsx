@@ -296,7 +296,8 @@ import CampaignsHeaderBar from './CampaignsHeaderBar';
 import CampaignsTable from './CampaignsTable';
 import CreateCampaignModal from './CreateCampaignModal';
 import KanbanView from './KanbanView';
-import { DefaultCampaigns } from '../data/data'; // ✅ updated import
+import DefaultCampaigns from './defaultcampaigns';
+
 
 const Campaigns = () => {
   const getInitialCampaigns = () => {
@@ -322,12 +323,18 @@ const Campaigns = () => {
       <CampaignsHeaderBar onCreateClick={() => setShowModal(true)} />
 
       {viewMode === 'table' ? (
+        // <CampaignsTable
+        //   campaigns={campaigns}
+        //   setCampaigns={setCampaigns}
+        //   viewMode={viewMode}
+        //   setViewMode={setViewMode}
+        // />
         <CampaignsTable
-          campaigns={campaigns}
-          setCampaigns={setCampaigns}
-          viewMode={viewMode}
-          setViewMode={setViewMode}
-        />
+            campaigns={campaigns}
+            setCampaigns={setCampaigns}
+             viewMode={viewMode}
+             setViewMode={setViewMode}
+             />
       ) : (
         <KanbanView campaigns={campaigns} setCampaigns={setCampaigns} />
       )}

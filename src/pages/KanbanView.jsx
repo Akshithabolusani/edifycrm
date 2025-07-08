@@ -40,6 +40,15 @@
 
 
 // KanbanView.js (Simple Drag and Drop without libraries)
+// 
+
+
+
+
+
+
+
+
 import React from 'react';
 import '../styles/KanbanView.css';
 
@@ -70,7 +79,7 @@ const KanbanView = ({ campaigns, setCampaigns }) => {
           onDragOver={allowDrop}
         >
           <h3>
-           {status} ({campaigns.filter(c => c.status === status).length})
+            {status} ({campaigns.filter(c => c.status === status).length})
           </h3>
 
           {campaigns
