@@ -103,7 +103,7 @@ const CampaignsHeaderBar = ({ onCreateClick }) => {
         <select className="campaigns-dropdown">
           <option>All Active Campaigns</option>
           <option>My Campaigns</option>
-          <option>Archived Campaigns</option>
+          <option>recently viewed campaigns</option>
         </select>
       </div>
 
@@ -124,8 +124,6 @@ const CampaignsHeaderBar = ({ onCreateClick }) => {
           <option value="import">Import Campaign</option>
         </select>
 
-        {/* Actions Button */}
-        <button className="btn actions-btn">Actions</button>
       </div>
     </div>
   );
@@ -134,72 +132,4 @@ const CampaignsHeaderBar = ({ onCreateClick }) => {
 export default CampaignsHeaderBar;
 
 
-// import React from 'react';
-// import { Calendar, LayoutList, LayoutGrid } from 'lucide-react';
-// import '../styles/CampaignsHeaderBar.css';
-
-// const CampaignsHeaderBar = ({ onCreateClick, viewMode, setViewMode }) => {
-//   const handleCreateChange = (e) => {
-//     const value = e.target.value;
-
-//     if (value === 'new') {
-//       onCreateClick(); // Open modal
-//     }
-
-//     // Reset dropdown to default
-//     e.target.selectedIndex = 0;
-//   };
-
-//   return (
-//     <div className="campaigns-header-bar">
-//       {/* Left: Campaign dropdown */}
-//       <div className="left-section">
-//         <select className="campaigns-dropdown">
-//           <option>All Active Campaigns</option>
-//           <option>My Campaigns</option>
-//           <option>Archived Campaigns</option>
-//         </select>
-//       </div>
-
-//       {/* Right section */}
-//       <div className="right-section">
-//         {/* Date Picker */}
-//         <div className="date-picker-wrapper">
-//           <input type="date" className="date-picker-input" />
-//           <Calendar className="calendar-icon" />
-//         </div>
-
-//         {/* View Mode Toggle */}
-//         <div className="view-mode-toggle">
-//           <button
-//             onClick={() => setViewMode('table')}
-//             className={`view-toggle-btn ${viewMode === 'table' ? 'active' : ''}`}
-//           >
-//             <LayoutList size={16} style={{ marginRight: '4px' }} />
-//             Table
-//           </button>
-//           <button
-//             onClick={() => setViewMode('kanban')}
-//             className={`view-toggle-btn ${viewMode === 'kanban' ? 'active' : ''}`}
-//           >
-//             <LayoutGrid size={16} style={{ marginRight: '4px' }} />
-//             Kanban
-//           </button>
-//         </div>
-
-//         {/* Create Campaign Dropdown */}
-//         <select className="create-dropdown" onChange={handleCreateChange}>
-//           <option disabled selected>Create Campaign</option>
-//           <option value="new">New Campaign</option>
-//           <option value="import">Import Campaign</option>
-//         </select>
-
-//         {/* Actions Button */}
-//         <button className="btn actions-btn">Actions</button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default CampaignsHeaderBar;
 
